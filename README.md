@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+## Welcome to TwitterLocationFlow
 
-You can use the [editor on GitHub](https://github.com/luisbalru/TwitterLocationFlow/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+In this page you will be able to find the progress in my Virtual Infrastructure project!! Here you have some information:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### About the project
 
-### Markdown
+Enjoy the interactions flow between Twitter's users around a topic!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Tools
+Python will be the programming language used
 
-```markdown
-Syntax highlighted code block
+### License
 
-# Header 1
-## Header 2
-### Header 3
+This project is under GNU general public licence with the so called copyleft that **allows**:
 
-- Bulleted
-- List
+    Commercial use
+    Distribution
+    Modification
+    Patent use
+    Private use
 
-1. Numbered
-2. List
+With these **conditions**:
 
-**Bold** and _Italic_ and `Code` text
+    Disclose source
+    License and copyright notice
+    Same license
+    State changes
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/luisbalru/TwitterLocationFlow/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
