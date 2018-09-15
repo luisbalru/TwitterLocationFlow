@@ -11,7 +11,7 @@ Python will be the programming language used
 
 ### License
 
-This project is under GNU general public licence with the so called copyleft that **allows**:
+This project is under [GNU general public licence](https://choosealicense.com/licenses/gpl-3.0/) with the so called _copyleft_ that **allows**:
 
     Commercial use
     Distribution
