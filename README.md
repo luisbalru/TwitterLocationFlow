@@ -10,7 +10,7 @@ In this page you will be able to find the progress in my Virtual Infrastructure 
 
 ### About the project
 
-Enjoy the interactions flow between Twitter's users around a topic! Choose whatever word or hashtag you are keen on and discover in a world map where are people who are tweeting about that topic. Besides, if there are conversations between Twitter users about the topic you like, you will see in the map arcs or flows between the users.
+Enjoy the interactions between Twitter's users around a topic, word or hashtag! Choose whatever word or hashtag you are keen on and discover in a world map where are people who are tweeting about that topic. Besides, if there are conversations between Twitter users about the topic you like, you will see in the map arcs or flows between the users.
 
 ### Tools
 [Python](https://www.python.org/) will be the programming language used. In particular, Flask framework may be used although it is not a decision totally made yet.  
