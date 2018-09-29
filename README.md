@@ -22,9 +22,9 @@ Privacy Twitter's policy must be taken into account so I just want to warehouse 
 
 To summarize, I consider to deploy three microservices:   
 
-	- A first microservice focused on the user interface.  
-	- A second microservice (the core) where I warehouse the information in the Neo4j Graph Database.  
-	-Finally, a third microservice who is encharged of representing the points, arcs in the map and the flow of information.  
+- A first microservice focused on the user interface.  
+- A second microservice (the core) where I warehouse the information in the Neo4j Graph Database.  
+- Finally, a third microservice who is encharged of representing the points, arcs in the map and the flow of information.  
  
 ### License
 
