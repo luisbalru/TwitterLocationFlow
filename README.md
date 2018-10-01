@@ -19,7 +19,7 @@ Basically, the data structure which lie beneath my app is a graph, so I'm using 
 
 *Unittest* library will be used as testing tool.  Besides, [*Travis*](https://travis-ci.org/)  will asume the continuous integration tasks.  
 
-Finally, keeping in mind that I'm using Python 3.6.4, I will choose *venv* python module for create the virtual development enviroment.  More information about creating VDE with *venv* [here](https://github.com/luisbalru/TwitterLocationFlow/blob/master/doc/vde_venv.md)
+Finally, keeping in mind that I'm using Python 3.6.4, I will choose *venv* python module to create the virtual development enviroment.  More information about creating VDE with *venv* [here](https://github.com/luisbalru/TwitterLocationFlow/blob/master/doc/vde_venv.md)
 
 
 Privacy Twitter's policy must be taken into account so I just want to warehouse the user's location but **NOT** his/her nick nor the whole content of the tweet. Those tweets which form part of a conversation will be treated as a link of union between the speakers.  
