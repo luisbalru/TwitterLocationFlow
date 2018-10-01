@@ -17,7 +17,7 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 [Python](https://www.python.org/) will be the programming language used. In particular, Flask framework may be used although it is not a decision totally made yet (could be also Hub).  
 Basically, the data structure which lie beneath my app is a graph, so I'm using a graph database to warehouse my information. I have choosen [*Neo4j*](https://neo4j.com/) due to the fact that is Open Source, supports ACID and I will be able to use it buil-in REST web API interface. In terms of cloud deploying, [Heroku](https://www.heroku.com/) will be used due to its ease and free version.  
 
-*Unittest* library will be used as testing tool.  Besides, [*Jenkins*](https://jenkins.io/)  will asume the continuous integration tasks.  
+*Unittest* library will be used as testing tool.  Besides, [*Travis*](https://travis-ci.org/)  will asume the continuous integration tasks.  
 
 Finally, keeping in mind that I'm using Python 3.6.4, I will choose *venv* python module for create the virtual development enviroment.  More information about creating VDE with *venv* [here](https://github.com/luisbalru/TwitterLocationFlow/blob/master/doc/vde_venv.md)
 
