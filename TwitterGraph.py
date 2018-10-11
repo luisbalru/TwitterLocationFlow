@@ -47,7 +47,7 @@ class TwitterGraph:
         """ arista es un conjunto, tupla o lista """
         arista = set(arista)
         vertice1 = arista.pop()
-        if edge:
+        if arista:
             vertice2 = arista.pop()
         else:
             vertice2 = vertice1
@@ -55,6 +55,25 @@ class TwitterGraph:
             self.__graph_dict[vertice1].append(vertice2)
         else:
             self.__graph_dict[vertice1] = vertice2
+
+    def elimina_conexion(self, vertice1, vertice2):
+        """ Elimina la arista entre vertice1 y vertice2 """
+        aristas = self.__graph_dict[vertice1]
+        if aristas:
+            aristas.remove(vertice2)
+            self.__graph_dict[vertice1] = aristas
+        aristas = self.__graph_dict[vertice2]
+        if aristas:
+            aristas.remove(vertice1)
+            self.__graph_dict[vertice2] = aristas
+
+    def elimina_vertice(self, vertice):
+        """ Elimina un vértice del grafo (y todas sus conexiones) """
+        if vertice in self.__graph_dict:
+            del self.__graph_dict[vertice]
+            for vertex in self.__graph_dict:
+                if vertice in self.__graph_dict[vertex]
+                    self.__graph_dict[vertex].remove(vertice)
 
     def __generar_vertices(self):
         """ Método estático que genera las aristas del grafo
