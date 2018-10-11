@@ -67,3 +67,66 @@ class TwitterGraph:
                 if {vertice, neighbour} not in aristas:
                     aristas.append(({vertice,neighbour}))
         return aristas
+
+    def __str__(self):
+        res = "vertices: "
+        for k in self.__graph_dict:
+            res += str(k) + " "
+        res += "\nedges: "
+        for edge in self.__generate_edges():
+            res += str(edge) + " "
+        return res
+
+    def vertices_aislados(self):
+        """ devuelve una lista de vertices aislados. """
+        graph = self.__graph_dict
+        isolated = []
+        for vert in graph:
+            if not graph[vert]:
+                isolated += [vertex]
+        return isolated
+
+    def grado_vertice(self, vertice):
+        """ El grado de un vértice es el número de
+            aristas que conectan con él, es decir,
+            el número de vértices adyacentes.
+        """
+        adj_vertices = self.__graph_dict[vertice]
+        grado = len(adj_vertices)
+        return grado
+
+    def find_path(self, start_vertex, end_vertex, path=[]):
+        """ Función recuersiva que encuentra un camino entre un vértice de
+            partida y otro de llegada
+        """
+        graph = self.__graph_dict
+        path = path + [start_vertex]
+        if start_vertex == end_vertex:
+            return path
+        if start_vertex not in graph:
+            return None
+        for vertex in graph[start_vertex]:
+            if vertex not in path:
+                extended_path = self.find_path(vertex, end_verte, path)
+                if extended_path:
+                    return extended_path
+        return None
+
+
+    def find_all_paths(self, start_vertex, end_vertex, path=[]):
+        """ Encuentra todos los caminos entre un vértices
+            de partida y un vértice de llegada
+        """
+        graph = self.__graph_dict
+        path = path + [start_vertex]
+        if start_vertex == end_vertex:
+            return [path]
+        if start_vertex not in graph:
+            return []
+        paths = []
+        for vertex in graph[start_vertex]:
+            if vertex not in path:
+                extended_paths = self.find_all_paths(vertex, end_vertex,path)
+                for p in extended_paths:
+                    paths.append(p)
+        return paths
