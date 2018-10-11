@@ -1,5 +1,6 @@
 import json
 import os
+import posixpath
 
 class TwitterGraph:
     """ Clase principal del proyecto que gestiona la estructura de datos de mi grafo.
@@ -10,19 +11,19 @@ class TwitterGraph:
     def __init__(self):
         """ Inicializa el objeto grafo """
         try: # Basado en el HitosIV.py de JJ/tests-python
-            if os.path.exists('nodes.json'):
+            if os.path.isfile('nodes.json'):
                 path = 'nodes.json'
-            elif os.path.exits('/data/nodes.json'):
+            elif os.path.isfile('/data/nodes.json'):
                 path = '/data/nodes.json'
-            elif os.path.exists('./data/nodes.json'):
+            elif os.path.isfile('./data/nodes.json'):
                 path = './data/nodes.json'
-            elif os.path.exists('../data/nodes.json'):
+            elif os.path.isfile('../data/nodes.json'):
                 path = '../data/nodes.json'
             else:
                 raise IOError("No se encuentra 'nodes.json'")
 
             with open(path,"r") as data_file:
-                self.__graph_dict = json.loads(data_file)[0]
+                self.__graph_dict = json.loads(data_file.read())
         except IOError as fallo:
             print("Error {:s} leyendo nodes.json".format(fallo))
 
@@ -32,7 +33,7 @@ class TwitterGraph:
 
     def aristas(self):
         """ Devuelve las aristas del grafo """
-        return self.__generate_edges()
+        return self.__generar_aristas()
 
     def add_vertice(self, vertex):
         """ Si el vértice 'vertex' no está en self.__graph_dict
@@ -72,19 +73,19 @@ class TwitterGraph:
         if vertice in self.__graph_dict:
             del self.__graph_dict[vertice]
             for vertex in self.__graph_dict:
-                if vertice in self.__graph_dict[vertex]
+                if vertice in self.__graph_dict[vertex]:
                     self.__graph_dict[vertex].remove(vertice)
 
-    def __generar_vertices(self):
+    def __generar_aristas(self):
         """ Método estático que genera las aristas del grafo
             'graph'. Las aristas se representan como conjuntos
             con uno o dos vértices
         """
         aristas = []
         for vertice in self.__graph_dict:
-            for neighbour in self.__graph_dict[vertice]
-                if {vertice, neighbour} not in aristas:
-                    aristas.append(({vertice,neighbour}))
+            for neighbour in self.__graph_dict[vertice]:
+                if {neighbour,vertice} not in aristas:
+                    aristas.append(({neighbour,vertice}))
         return aristas
 
     def __str__(self):
@@ -92,7 +93,7 @@ class TwitterGraph:
         for k in self.__graph_dict:
             res += str(k) + " "
         res += "\nedges: "
-        for edge in self.__generate_edges():
+        for edge in self.__generar_aristas():
             res += str(edge) + " "
         return res
 
@@ -102,7 +103,7 @@ class TwitterGraph:
         isolated = []
         for vert in graph:
             if not graph[vert]:
-                isolated += [vertex]
+                isolated += [vert]
         return isolated
 
     def grado_vertice(self, vertice):
@@ -126,7 +127,7 @@ class TwitterGraph:
             return None
         for vertex in graph[start_vertex]:
             if vertex not in path:
-                extended_path = self.find_path(vertex, end_verte, path)
+                extended_path = self.find_path(vertex, end_vertex, path)
                 if extended_path:
                     return extended_path
         return None
