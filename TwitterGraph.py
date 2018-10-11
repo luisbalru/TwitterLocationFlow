@@ -1,11 +1,12 @@
+# coding=utf-8
 import json
 import os
-import posixpath
+
 
 class TwitterGraph:
     """ Clase principal del proyecto que gestiona la estructura de datos de mi grafo.
         Basada en la representación de grafo dada en https://www.python-course.eu
-        Añadidas algunas modificaciones
+        Aniadidas algunas modificaciones
     """
 
     def __init__(self):
