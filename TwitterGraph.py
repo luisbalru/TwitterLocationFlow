@@ -26,7 +26,7 @@ class TwitterGraph:
             with open(path,"r") as data_file:
                 self.__graph_dict = json.loads(data_file.read())
         except IOError as fallo:
-            print("Error {:s} leyendo nodes.json".format(fallo))
+            print("Error {:s} leyendo el fichero nodes.json".format(fallo))
 
     def vertices(self):
         """ Devuelve los vértices del grafo """
