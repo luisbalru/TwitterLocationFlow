@@ -5,7 +5,7 @@ import unittest
 from TwitterGraph import TwitterGraph
 
 class TestTwitterGraph(unittest.TestCase):
-
+    """ Clase creada para pasar los tests a TwitterGraph """
     def setUp(self):
         self.__graph_dict = TwitterGraph()
 
@@ -34,5 +34,3 @@ class TestTwitterGraph(unittest.TestCase):
     def test_grado_vertice(self):
         with self.assertRaises(KeyError):
             self.__graph_dict.grado_vertice(1)
-
-    
