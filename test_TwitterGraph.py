@@ -5,7 +5,7 @@ import unittest
 from TwitterGraph import TwitterGraph
 
 class TestTwitterGraph(unittest.TestCase):
-    """ Clase creada para pasar los tests a TwitterGraph """
+    """ Clase creada para pasar tests a TwitterGraph """
     def setUp(self):
         self.__graph_dict = TwitterGraph()
 
