@@ -36,14 +36,22 @@ class TwitterGraph:
         """ Devuelve las aristas del grafo """
         return self.__generar_aristas()
 
+    def grafo(self):
+        """ Devuelve el dictionario donde se almacena el grafo"""
+        return self.__graph_dict
+
     def add_vertice(self, vertex):
         """ Si el vértice 'vertex' no está en self.__graph_dict
             se introduce en el diccionario una nueva clave
             'vertex' con una lista vacía como valor.
             En otro caso, no se hace nada
         """
-        if vertex not in self.__graph_dict:
-            self.__graph_dict[vertex] = []
+        if (not type(vertex) is str):
+            raise TypeError("El vértice debe ser un string")
+        if vertex in self.__graph_dict:
+            raise ValueError("Este vértice ya existe")
+
+        self.__graph_dict[vertex] = []
 
     def add_arista(self, arista):
         """ arista es un conjunto, tupla o lista """
@@ -53,21 +61,40 @@ class TwitterGraph:
             vertice2 = arista.pop()
         else:
             vertice2 = vertice1
-        if vertice1 in self.__graph_dict:
+
+        if(not (vertice1 in self.__graph_dict) or not(vertice2 in self.__graph_dict)):
+            raise ValueError("Los vértices dados no pertenecen al grafo")
+
+        elif vertice1 in self.__graph_dict and vertice2 in self.__graph_dict:
             self.__graph_dict[vertice1].append(vertice2)
-        else:
-            self.__graph_dict[vertice1] = vertice2
+            self.__graph_dict[vertice2].append(vertice1)
 
     def elimina_conexion(self, vertice1, vertice2):
         """ Elimina la arista entre vertice1 y vertice2 """
-        aristas = self.__graph_dict[vertice1]
+        if vertice1 in self.__graph_dict:
+            aristas = self.__graph_dict[vertice1]
+        else:
+            raise ValueError("El primer vértice no está en el grafo")
         if aristas:
-            aristas.remove(vertice2)
-            self.__graph_dict[vertice1] = aristas
-        aristas = self.__graph_dict[vertice2]
+            if vertice2 in aristas:
+                aristas.remove(vertice2)
+                self.__graph_dict[vertice1] = aristas
+            else:
+                raise ValueError("Los vértices no están conectados")
+        else:
+            raise ValueError("Los vértices no están conectados")
+
+        if vertice2 in self.__graph_dict:
+            aristas = self.__graph_dict[vertice2]
+        else:
+            raise ValueError("El segundo vértice no está en el grafo")
+
         if aristas:
-            aristas.remove(vertice1)
-            self.__graph_dict[vertice2] = aristas
+            if vertice1 in aristas:
+                aristas.remove(vertice1)
+                self.__graph_dict[vertice2] = aristas
+            else:
+                raise ValueError("Los vértices no están conectados")
 
     def elimina_vertice(self, vertice):
         """ Elimina un vértice del grafo (y todas sus conexiones) """
@@ -76,6 +103,8 @@ class TwitterGraph:
             for vertex in self.__graph_dict:
                 if vertice in self.__graph_dict[vertex]:
                     self.__graph_dict[vertex].remove(vertice)
+        else:
+            raise ValueError("No existe el vértice")
 
     def __generar_aristas(self):
         """ Método estático que genera las aristas del grafo
@@ -112,7 +141,11 @@ class TwitterGraph:
             aristas que conectan con él, es decir,
             el número de vértices adyacentes.
         """
-        adj_vertices = self.__graph_dict[vertice]
+        if vertice in self.__graph_dict:
+            adj_vertices = self.__graph_dict[vertice]
+        else:
+            raise KeyError("El vértice no está en el grafo")
+            
         grado = len(adj_vertices)
         return grado
 
