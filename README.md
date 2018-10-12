@@ -27,18 +27,5 @@ To summarize, I consider to deploy three microservices:
  
 ### License
 
-This project is under [GNU general public licence](https://choosealicense.com/licenses/gpl-3.0/) with the so called _copyleft_ that **allows**:
-
-    Commercial use
-    Distribution
-    Modification
-    Patent use
-    Private use
-
-With these **conditions**:
-
-    Disclose source
-    License and copyright notice
-    Same license
-    State changes
+Here you can find the [Licence](https://github.com/luisbalru/TwitterLocationFlow/blob/master/LICENSE)
 
