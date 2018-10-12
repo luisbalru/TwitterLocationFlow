@@ -6,7 +6,7 @@ import os
 class TwitterGraph:
     """ Clase principal del proyecto que gestiona la estructura de datos de mi grafo.
         Basada en la representación de grafo dada en https://www.python-course.eu
-        Aniadidas algunas modificaciones
+        Añadidas algunas modificaciones.
     """
 
     def __init__(self):
@@ -145,7 +145,7 @@ class TwitterGraph:
             adj_vertices = self.__graph_dict[vertice]
         else:
             raise KeyError("El vértice no está en el grafo")
-            
+
         grado = len(adj_vertices)
         return grado
 
