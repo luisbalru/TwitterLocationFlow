@@ -53,7 +53,7 @@ class TestTwitterGraph(unittest.TestCase):
         self.__graph_dict.add_arista(['n','aux'])
         self.__graph_dict.add_arista(['aux','t'])
         self.__graph_dict.add_arista(['m','t'])
-        self.assertEqual(self.__graph_dict.find_all_paths('n','t'),[['n', 'm', 't'], ['n', 'aux', 't'], "Caminos correctos")
+        self.assertEqual(self.__graph_dict.find_all_paths('n','t'),[['n', 'm', 't'], ['n', 'aux', 't']], "Caminos correctos")
 
     def test_isolated_vertex(self):
         self.__graph_dict.add_vertice('n')
