@@ -36,11 +36,11 @@ class TestTwitterGraph(unittest.TestCase):
         with self.assertRaises(KeyError):
             self.__graph_dict.grado_vertice(1)
 
-    """def test_find_path(self):
+    def test_find_path(self):
         self.assertEqual(self.__graph_dict.find_path('a','e'), ['a', 'd', 'c', 'e'], "Camino correcto")
 
     def test_find_all_paths(self):
         self.assertEqual(self.__graph_dict.find_all_paths('a','e'),[['a', 'd', 'c', 'e'], ['a', 'd', 'c', 'x', 'p', 'e']], "Caminos correctos")
 
     def test_isolated_vertex(self):
-        self.assertEqual(self.__graph_dict.vertices_aislados(),['f'], "El único vértice aislado es 'f'")"""
+        self.assertEqual(self.__graph_dict.vertices_aislados(),['f'], "El único vértice aislado es 'f'")
