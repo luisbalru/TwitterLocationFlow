@@ -37,10 +37,24 @@ class TestTwitterGraph(unittest.TestCase):
             self.__graph_dict.grado_vertice(1)
 
     def test_find_path(self):
-        self.assertEqual(self.__graph_dict.find_path('a','e'), ['a', 'd', 'c', 'e'], "Camino correcto")
+        self.__graph_dict.add_vertice('n')
+        self.__graph_dict.add_vertice('m')
+        self.__graph_dict.add_vertice('t')
+        self.__graph_dict.add_arista(['n','m'])
+        self.__graph_dict.add_arista(['m','t'])
+        self.assertEqual(self.__graph_dict.find_path('n','t'), ['n', 'm', 't'], "Camino correcto")
 
     def test_find_all_paths(self):
-        self.assertEqual(self.__graph_dict.find_all_paths('a','e'),[['a', 'd', 'c', 'e'], ['a', 'd', 'c', 'x', 'p', 'e']], "Caminos correctos")
+        self.__graph_dict.add_vertice('n')
+        self.__graph_dict.add_vertice('m')
+        self.__graph_dict.add_vertice('aux')
+        self.__graph_dict.add_vertice('t')
+        self.__graph_dict.add_arista(['n','m'])
+        self.__graph_dict.add_arista(['n','aux'])
+        self.__graph_dict.add_arista(['aux','t'])
+        self.__graph_dict.add_arista(['m','t'])
+        self.assertEqual(self.__graph_dict.find_all_paths('n','t'),[['n', 'm', 't'], ['n', 'aux', 't'], "Caminos correctos")
 
     def test_isolated_vertex(self):
-        self.assertEqual(self.__graph_dict.vertices_aislados(),['f'], "El único vértice aislado es 'f'")
+        self.__graph_dict.add_vertice('n')
+        self.assertEqual(self.__graph_dict.vertices_aislados(),['n'], "El único vértice aislado es 'n'")
