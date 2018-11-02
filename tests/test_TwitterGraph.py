@@ -2,7 +2,7 @@
 
 import unittest
 
-from TwitterGraph import TwitterGraph
+from src.TwitterGraph import TwitterGraph
 
 class TestTwitterGraph(unittest.TestCase):
     """ Clase creada para pasar tests a TwitterGraph """
