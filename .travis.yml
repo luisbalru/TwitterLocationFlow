@@ -11,4 +11,3 @@ install:
 
 script:
   - pytest
-  - python test_TwitterGraph.py
