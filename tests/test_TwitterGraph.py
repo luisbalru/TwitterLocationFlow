@@ -58,3 +58,8 @@ class TestTwitterGraph(unittest.TestCase):
     def test_isolated_vertex(self):
         self.__graph_dict.add_vertice('n')
         self.assertEqual(self.__graph_dict.vertices_aislados(),['n'], "El único vértice aislado es 'n'")
+
+
+
+if __name__ == '__main__':
+    unittest.main()
