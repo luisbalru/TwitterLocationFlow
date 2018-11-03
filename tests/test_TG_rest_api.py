@@ -11,7 +11,7 @@ class testAPI(unittest.TestCase):
 	def test_root(self):
 		response = requests.get(url)
 		self.assertEqual(response.status_code, 200, "Devuelve codigo correcto.")
-        	self.assertEqual(response.json()['status'], 'OK', "Devuelve estado correcto.")
+        self.assertEqual(response.json()['status'], 'OK', "Devuelve estado correcto.")
 
 	def test_status(self):
 		response = requests.get(url + '/status')
