@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-""" API Rest for TwitterGraph """
+""" API REST for TwitterGraph """
 
 import json
 from flask import Flask, jsonify, request, make_response
