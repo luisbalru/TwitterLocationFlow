@@ -10,12 +10,25 @@ In this page you will be able to find the progress in my Virtual Infrastructure 
 
 Enjoy the interactions between Twitter's users around a topic, word or hashtag! Choose whatever word or hashtag you are keen on and discover in a world map where are people who are tweeting about that topic. Besides, if there are conversations between Twitter users about the topic you like, you will see in the map arcs or flows between the users.
 
+### Links
+
+[Official repository website](https://luisbalru.github.io/TwitterLocationFlow/)
+[App](https://iv1819-twitterlocationflow.herokuapp.com/)
+
+### Tools
+ - Python (Flask)
+ - Heroku (Paas). [Why Heroku?](doc/why-heroku.md)
+
 ### Installation
 
 `pip install -r requirements.txt`
 
-### Tests 
+### Documentation
 
+[API Documentation](doc/API.md)
+[Heroku Setup](doc/Heroku.md)
+
+### Tests
 
 [![Build Status](https://travis-ci.org/luisbalru/TwitterLocationFlow.svg?branch=master)](https://travis-ci.org/luisbalru/TwitterLocationFlow)
 
@@ -26,8 +39,7 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 ### Run the main program
 
 `python3 TwitterGraph.py`
- 
+
 ### License
 
 Here you can find the [Licence](https://github.com/luisbalru/TwitterLocationFlow/blob/master/LICENSE)
-
