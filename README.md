@@ -25,7 +25,7 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 
 ### Documentation
 
-[API Documentation](doc/API.md)
+[API Documentation](doc/API.md)  
 [Heroku Setup](doc/Heroku.md)
 
 ### Tests
