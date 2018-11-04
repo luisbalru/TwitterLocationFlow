@@ -12,8 +12,8 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 
 ### Links
 
-[Official repository website](https://luisbalru.github.io/TwitterLocationFlow/)
-[App](https://iv1819-twitterlocationflow.herokuapp.com/)
+[Official repository website](https://luisbalru.github.io/TwitterLocationFlow/)  
+[Deployed App](https://iv1819-twitterlocationflow.herokuapp.com/)
 
 ### Tools
  - Python (Flask)
