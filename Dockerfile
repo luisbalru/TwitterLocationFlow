@@ -6,6 +6,6 @@ COPY . /twitterlocationflow
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-EXPOSE 80
+EXPOSE 31416
 
 CMD ["python3", "app.py"]
