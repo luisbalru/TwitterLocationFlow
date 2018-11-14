@@ -1,8 +1,12 @@
 FROM python:3.6
 
-COPY . ./twitterlocationflow
+WORKDIR /twitterlocationflow
 
-RUN pip install --upgrade pip
-RUN cd ./twitterlocationflow && pip3 install -r requirements.txt
+COPY ./twitterlocationflow
 
-ENTRYPOINT cd ./twitterlocationflow && python3 app.py
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+EXPOSE 80
+
+CMD ["python3", "app.py"]
+
