@@ -1,0 +1,7 @@
+setup:
+  config: {}
+build:
+  languages:
+    - python
+run:
+  web: 'gunicorn app:app'
