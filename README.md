@@ -36,7 +36,7 @@ Contenedor Zeit: https://twitterlocationflow-beql36dlw.now.sh
 [Procfile Doc](doc/Procfile-doc.md)
 [Automated build DockerHub](doc/ab-dockerhub.md)
 [Zeit installation/deployment](doc/zeit-deploy.md)
-
+[Heroku Deployment with Docker](doc/heroku-docker.md)
 
 ### Tests
 
