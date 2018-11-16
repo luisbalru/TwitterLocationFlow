@@ -22,6 +22,8 @@ Zeit: https://twitterlocationflow-beql36dlw.now.sh
 ### Tools
  - Python (Flask)
  - Heroku (Paas). [Why Heroku?](doc/why-heroku.md)
+ - Docker/DockerHub
+ - Zeit
 
 ### Installation
 
@@ -32,6 +34,9 @@ Zeit: https://twitterlocationflow-beql36dlw.now.sh
 [API Documentation](doc/API.md)  
 [Heroku Setup](doc/Heroku.md)
 [Procfile Doc](doc/Procfile-doc.md)
+[Automated build DockerHub](doc/ab-dockerhub.md)
+[Zeit installation/deployment](doc/zeit-deploy.md)
+[Deploying Heroku with Docker](doc/heroku-docker.md)
 
 ### Tests
 
