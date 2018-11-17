@@ -20,7 +20,7 @@ def index():
 def status():
     return jsonify(status='OK')
 
-@app.route("/all", methods=['POST'])
+@app.route("/all", methods=['GET','POST'])
 def all():
     return jsonify(status=TwitterGraph.grafo())
 
