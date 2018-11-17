@@ -17,5 +17,9 @@ class testAPI(unittest.TestCase):
 		self.assertEqual(response.json()['status'], 'OK', "Estado correcto")
 
 
+
+
+		
+
 if __name__ == '__main__':
 	unittest.main()
