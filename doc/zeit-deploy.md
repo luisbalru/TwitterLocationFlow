@@ -1,4 +1,4 @@
-# ZEIT DEPLOYMENT
+# ZEIT DEPLOYMENT (V1)
 
 1. Sign up in Zeit
 2. Download and install [Now](https://zeit.co/download#command-line)/ZeitCLI
