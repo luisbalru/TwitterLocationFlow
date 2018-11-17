@@ -15,7 +15,7 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 [Official repository website](https://luisbalru.github.io/TwitterLocationFlow/)    
 [Despliegue](https://iv1819-twitterlocationflow.herokuapp.com/)
 
-Contenedor DockerHub `docker pull luisbalru/twitterlocationflow`
+Contenedor DockerHub https://hub.docker.com/r/luisbalru/twitterlocationflow/ `docker pull luisbalru/twitterlocationflow`
 
 Zeit: https://twitterlocationflow-beql36dlw.now.sh 
 
