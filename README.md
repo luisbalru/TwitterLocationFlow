@@ -17,7 +17,7 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 
 Contenedor DockerHub `docker pull luisbalru/twitterlocationflow`
 
-Contenedor Zeit: https://twitterlocationflow-beql36dlw.now.sh 
+Zeit: https://twitterlocationflow-beql36dlw.now.sh 
 
 ### Tools
  - Python (Flask)
