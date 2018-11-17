@@ -22,7 +22,7 @@ def status():
 
 @app.route("/all", methods=['POST'])
 def all():
-    return jsonify(success=TwitterGraph.grafo())
+    return jsonify(status=TwitterGraph.grafo())
 
 @app.route("/vertices", methods=['POST'])
 def vertices():
