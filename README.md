@@ -13,9 +13,11 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 ### Links
 
 [Official repository website](https://luisbalru.github.io/TwitterLocationFlow/)    
-[Despliegue](https://iv1819-twitterlocationflow.herokuapp.com/)
+Contenedor: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-twitterlocationflow.herokuapp.com/)
 
-Contenedor DockerHub https://hub.docker.com/r/luisbalru/twitterlocationflow/ `docker pull luisbalru/twitterlocationflow`
+DockerHub: https://hub.docker.com/r/luisbalru/twitterlocationflow/   
+
+`docker pull luisbalru/twitterlocationflow`
 
 Zeit: https://twitterlocationflow-beql36dlw.now.sh 
 
@@ -50,6 +52,6 @@ Zeit: https://twitterlocationflow-beql36dlw.now.sh
 
 `python3 TwitterGraph.py`
 
-### License
+### LICENSE
 
 Here you can find the [Licence](https://github.com/luisbalru/TwitterLocationFlow/blob/master/LICENSE)
