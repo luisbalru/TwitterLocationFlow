@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """ API REST for TwitterGraph """
 
-import json
+import json, os
 from flask import Flask, jsonify, request, make_response
 from src.TwitterGraph import TwitterGraph
 
@@ -60,4 +60,7 @@ def remove_edge(edge):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
+    if 'PORT' in os.environ: p = os.environ['PORT']
+    else: p =31416
+
+    app.run(host='0.0.0.0', port=p)
