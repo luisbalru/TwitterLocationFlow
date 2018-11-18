@@ -13,7 +13,9 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 ### Links
 
 [Official repository website](https://luisbalru.github.io/TwitterLocationFlow/)    
-Contenedor: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-twitterlocationflow.herokuapp.com/)
+Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-twitterlocationflow.herokuapp.com/)
+
+Contenedor: https://docker-tlf.herokuapp.com/
 
 DockerHub: https://hub.docker.com/r/luisbalru/twitterlocationflow/   
 
