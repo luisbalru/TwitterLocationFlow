@@ -52,6 +52,6 @@ Zeit: https://twitterlocationflow-beql36dlw.now.sh
 
 `python3 TwitterGraph.py`
 
-### License
+### LICENSE
 
 Here you can find the [Licence](https://github.com/luisbalru/TwitterLocationFlow/blob/master/LICENSE)
