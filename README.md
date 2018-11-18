@@ -13,15 +13,18 @@ Enjoy the interactions between Twitter's users around a topic, word or hashtag! 
 ### Links
 
 [Official repository website](https://luisbalru.github.io/TwitterLocationFlow/)    
-Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-twitterlocationflow.herokuapp.com/)
 
 Contenedor: https://docker-tlf.herokuapp.com/
 
-DockerHub: https://hub.docker.com/r/luisbalru/twitterlocationflow/   
+
+Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-twitterlocationflow.herokuapp.com/)
+
+
+URL de despliegue en DockerHub: https://hub.docker.com/r/luisbalru/twitterlocationflow/   
 
 `docker pull luisbalru/twitterlocationflow`
 
-Zeit: https://twitterlocationflow-beql36dlw.now.sh 
+[Lugar en Zeit](https://twitterlocationflow-beql36dlw.now.sh )
 
 ### Tools
  - Python (Flask)
