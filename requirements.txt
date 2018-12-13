@@ -6,4 +6,5 @@ pytest==3.8.1
 gunicorn==19.9.0
 simplejson==3.13.2
 requests==2.20.0
-
+gremlinpython==3.3.1
+futures
