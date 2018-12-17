@@ -20,25 +20,9 @@ def index():
 def status():
     return jsonify(status='OK')
 
-@app.route("/all", methods=['GET','POST'])
-def all():
-    return jsonify(status=TwitterGraph.grafo())
-
 @app.route("/vertices", methods=['POST'])
 def vertices():
     return jsonify(success=TwitterGraph.vertices())
-
-@app.route("/aristas", methods=['POST'])
-def aristas():
-    return jsonify(success=TwitterGraph.aristas())
-
-@app.route("/grado/<id>", methods=['POST'])
-def grado_vertice(id):
-    return jsonify(success=TwitterGraph.grado_vertice(str(id)))
-
-@app.route("/vertices_aislados", methods=['POST'])
-def vertices_aislados():
-    return jsonify(success=TwitterGraph.vertices_aislados())
 
 @app.route("/vertices/add/<vertex>", methods=['POST'])
 def add_vertex(vertex):
