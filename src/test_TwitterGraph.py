@@ -1,7 +1,7 @@
 # coding=utf-8
 
 import unittest
-import sys, traceback
+import os,sys, traceback
 from gremlin_python.driver import client, serializer
 from .TwitterGraph import TwitterGraph
 
