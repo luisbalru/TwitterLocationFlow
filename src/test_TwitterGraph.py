@@ -3,7 +3,7 @@
 import unittest
 import os,sys, traceback
 from gremlin_python.driver import client, serializer
-from .TwitterGraph import TwitterGraph
+from TwitterGraph import TwitterGraph
 
 class TestTwitterGraph(unittest.TestCase):
     """ Clase creada para pasar tests a TwitterGraph """
@@ -11,8 +11,8 @@ class TestTwitterGraph(unittest.TestCase):
     def setUp(self):
         self.__graph_dict = TwitterGraph()
         try:
-            self.cliente = client.Client(os.environ['CLIENT_URL'],'g',
-                                        username = os.environ['CLIENT_USER'],
+            self.cliente = client.Client('wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443','g',
+                                        username = os.environ['CLIENT_USERNAME'],
                                         password = os.environ['CLIENT_PASSWD'],
                                         message_serializer = serializer.GraphSONSerializersV2d0())
         except Exception as e:
