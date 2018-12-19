@@ -10,7 +10,8 @@ Vagrant.configure('2') do |config|
 
   # use local ssh key to connect to remote vagrant box
   config.vm.provider :azure do |azure, override|
-    azure.vm_image_urn = 'canonical:UbuntuServer:16.04-LTS:16.04.201701130'
+    azure.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'
+    azure.vm_size = 'Standard_F1'
     azure.location = 'uksouth'
     azure.tcp_endpoints = '80'
     azure.vm_name = "twitterlocationflow"
@@ -25,7 +26,7 @@ Vagrant.configure('2') do |config|
   # Provisionar con ansible
   config.vm.provision "ansible" do |ansible|
     ansible.become = true
-    ansible.playbook = "provision/playbook.yml"
+    ansible.playbook = "./provision/playbook.yml"
 
   end
 
