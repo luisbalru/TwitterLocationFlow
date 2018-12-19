@@ -10,7 +10,7 @@ class TestTwitterGraph(unittest.TestCase):
     def setUp(self):
         self.__graph_dict = TwitterGraph()
     	try:
-            	self.cliente = client.Client(os.environ['CLIENT_URL'],'g',
+            self.cliente = client.Client(os.environ['CLIENT_URL'],'g',
                             username=os.environ['CLIENT_USER'],
                             password=os.environ['CLIENT_PASSWD'],
                             message_serializer=serializer.GraphSONSerializersV2d0())
@@ -18,7 +18,7 @@ class TestTwitterGraph(unittest.TestCase):
     		print('There was an exception: {0}'.format(e))
     		traceback.print_exc(file=sys.stdout)
     		sys.exit(1)
-        
+
 
     def test_add_vertice_correctamente(self):
         with self.assertRaises(TypeError):
