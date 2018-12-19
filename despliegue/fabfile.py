@@ -13,9 +13,8 @@ PURPOSE. See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>
 """
-from fabric.api import cd, run, sudo, env
+from fabric.api import cd, run, sudo, shell_env
 
-with shell_env(C_URL="CLIENT_URL",C_USER="CLIENT_USERNAME". C_PASS = "CLIENT_PASSWD")
 
 
 def Borrar():
@@ -30,16 +29,14 @@ def Actualizar():
     Borrar()
 
     # Descargamos nuevo repositorio
-    run('git clone https://github.com/luisbalru/TwitterLocationFlow.git')  
+    run('git clone https://github.com/luisbalru/TwitterLocationFlow.git')
 
     # Instalamos requirements
-    run('pip3 install -r TwitterLocationFlow/requirements.txt)
+    run('pip3 install -r TwitterLocationFlow/requirements.txt')
 
 
 def Iniciar():
-    
+
      # Iniciamos el servicio web
-    run('echo $C_URL && cd TwitterLocationFlow && sudo gunicorn app:app -b 0.0.0.0:80')
-
-
-
+    with shell_env(C_URL="CLIENT_URL",C_USER="CLIENT_USERNAME", C_PASS = "CLIENT_PASSWD"):
+        run('echo $C_URL && cd TwitterLocationFlow && sudo gunicorn app:app -b 0.0.0.0:80')
