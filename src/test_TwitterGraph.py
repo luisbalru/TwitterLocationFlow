@@ -11,7 +11,7 @@ class TestTwitterGraph(unittest.TestCase):
     def setUp(self):
         self.__graph_dict = TwitterGraph()
         try:
-            self.cliente = client.Client('wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443','g',
+            self.cliente = client.Client('wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443/','g',
                                         username = os.environ['CLIENT_USERNAME'],
                                         password = os.environ['CLIENT_PASSWD'],
                                         message_serializer = serializer.GraphSONSerializersV2d0())
