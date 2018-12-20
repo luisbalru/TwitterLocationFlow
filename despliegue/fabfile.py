@@ -19,9 +19,8 @@ from fabric.api import cd, run, sudo, shell_env
 
 
 def Borrar():
-
     # Borramos antiguo codigo
-    run('rm -rf TwitterLocationFlow')
+    run('sudo rm -rf TwitterLocationFlow')
 
 
 def Actualizar():
