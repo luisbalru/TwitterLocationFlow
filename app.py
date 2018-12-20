@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """ API REST for TwitterGraph """
 
-import json, os
+import os,sys, traceback,json
 from flask import Flask, jsonify, request, make_response
+from gremlin_python.driver import client, serializer
 from src.TwitterGraph import TwitterGraph
 
 try:
