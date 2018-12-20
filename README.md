@@ -1,9 +1,7 @@
 ## Welcome to TwitterLocationFlow
 
 [![Made with Love and Open Source](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.png?v=103)](https://opensource.org/licenses/GPL-3.0/)
-
 [![Build Status](https://travis-ci.org/luisbalru/TwitterLocationFlow.svg?branch=master)](https://travis-ci.org/luisbalru/TwitterLocationFlow)
-
 [![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com)
 
 In this page you will be able to find the progress in my Virtual Infrastructure project!! Here you have some information:
@@ -30,10 +28,7 @@ Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-t
 
 ### Tools
  - Python (Flask)
- - Travis CI (Integración continua)
  - Heroku (Paas). [Why Heroku?](doc/why-heroku.md)
- - Azure (IaaS)
- - [Gremlin Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-python) (Graph Database)
  - Docker/DockerHub
  - Zeit
 
@@ -49,6 +44,8 @@ Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-t
 [Automated build DockerHub](doc/ab-dockerhub.md)  
 [Zeit installation/deployment](doc/zeit-deploy.md)  
 [Heroku Deployment with Docker](doc/heroku-docker.md)
+[Creación y provisionamiento de máquinas](doc/provisionamiento.md)
+[Despliegue de la aplicación](doc/despliegue.md)
 
 
 ### Run the tests
