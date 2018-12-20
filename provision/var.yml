@@ -1,0 +1,11 @@
+project_name: TwitterLocationFlow
+project_repo: https://github.com/luisbalru/TwitterLocationFlow.git
+project_path: .
+
+system_packages:
+  - build-essential
+  - git
+  - python3
+  - python3-setuptools
+  - python3-pip
+  - libpq-dev
