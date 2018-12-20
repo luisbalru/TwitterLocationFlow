@@ -14,8 +14,8 @@ try:
                                         password = os.environ['C_PASS'],
                                         message_serializer = serializer.GraphSONSerializersV2d0())
 except Exception as e:
-    print('There was an exception: {0}'.format(e))
-    traceback.print_exc(file=sys.stdout)
+	print('There was an exception: {0}'.format(e))
+	traceback.print_exc(file=sys.stdout)
 	sys.exit(1)
 
 app = Flask(__name__)
