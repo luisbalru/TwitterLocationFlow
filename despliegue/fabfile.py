@@ -13,6 +13,7 @@ PURPOSE. See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>
 """
+import os
 from fabric.api import cd, run, sudo, shell_env
 
 
@@ -32,11 +33,11 @@ def Actualizar():
     run('git clone https://github.com/luisbalru/TwitterLocationFlow.git')
 
     # Instalamos requirements
-    run('pip3 install -r TwitterLocationFlow/requirements.txt')
+    run('pip3 install --user -r TwitterLocationFlow/requirements.txt')
 
 
 def Iniciar():
 
      # Iniciamos el servicio web
-    with shell_env(C_URL="CLIENT_URL",C_USER="CLIENT_USERNAME", C_PASS = "CLIENT_PASSWD"):
-        run('echo $C_URL && cd TwitterLocationFlow && sudo gunicorn app:app -b 0.0.0.0:80')
+    with shell_env(C_URL="'wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443'",C_USER=os.environ['CLIENT_USERNAME'], C_PASS = os.environ['CLIENT_PASSWD']):
+        run('cd TwitterLocationFlow && sudo gunicorn app:app -b 0.0.0.0:80')

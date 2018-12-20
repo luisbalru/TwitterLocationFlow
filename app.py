@@ -7,10 +7,10 @@ from flask import Flask, jsonify, request, make_response
 from src.TwitterGraph import TwitterGraph
 
 try:
-        self.cliente = client.Client(os.environ['C_URL'],'g',
-                        username=os.environ['C_USER'],
-                        password=os.environ['C_PASS'],
-                        message_serializer=serializer.GraphSONSerializersV2d0())
+        self.cliente = client.Client('wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443','g',
+                                        username = os.environ['CLIENT_USERNAME'],
+                                        password = os.environ['CLIENT_PASSWD'],
+                                        message_serializer = serializer.GraphSONSerializersV2d0())
 except Exception as e:
         print('There was an exception: {0}'.format(e))
         traceback.print_exc(file=sys.stdout)

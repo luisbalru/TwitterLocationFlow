@@ -1,19 +1,19 @@
-- hosts: twitterlocationflow
-  sudo: yes
+- hosts: all
   remote_user: vagrant
-
+  vars_files:
+    - var.yml
+  gather_facts: no
+  become: yes
   tasks:
-  - name: Actualizar sistema
-    command: sudo apt update
+    - name: Instalar paquetes base
+      apt: pkg={{ item }} update-cache=yes cache_valid_time=3600
+      with_items: "{{ system_packages }}"
 
-  - name: Upgrade sistema
-    command: sudo apt upgrade
+    - name: Actualizar sistema
+      command: apt update
 
-  - name: Instalar Git
-    command: sudo apt-get install -y git
+    - name: Update pip
+      command: pip3 install --upgrade pip
 
-  - name: Instalar pip
-    command: sudo apt-get install -y python3-pip
-
-  - name: Instalar requirements
-    command: pip3 install -r TwitterLocationFlow/requirements.txt
+    - name: Install gunicorn
+      command: pip install git+https://github.com/benoitc/gunicorn.git
