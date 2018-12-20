@@ -8,7 +8,7 @@ from gremlin_python.driver import client, serializer
 from src.TwitterGraph import TwitterGraph
 
 try:
-	print(os.environ['C_USER'])
+		print(os.environ['C_USER'])
         self.cliente = client.Client('wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443','g',
                                         username = os.environ['C_USER'],
                                         password = os.environ['C_PASS'],
