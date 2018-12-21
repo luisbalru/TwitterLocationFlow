@@ -51,9 +51,9 @@ def add_edge(edge):
 def remove_vertex(vertex):
     return jsonify(success=TwitterGraph.elimina_vertice(cliente,str(vertex)))
 
-@app.route("/aristas/remove/<edge1>/<edge2>", methods=['DELETE'])
+@app.route("/aristas/remove/<ver1>/<ver2>", methods=['DELETE'])
 def remove_edge(edge):
-    return jsonify(success=TwitterGraph.elimina_conexion(cliente,str(edge1),str(edge2)))
+    return jsonify(success=TwitterGraph.elimina_conexion(cliente,str(ver1),str(ver2)))
 
 @app.route("/vertices/cuenta_vertices", methods=['POST'])
 def count_vertex():
