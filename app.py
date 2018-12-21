@@ -64,6 +64,6 @@ def count_vertex():
 
 if __name__ == "__main__":
     if 'PORT' in os.environ: p = os.environ['PORT']
-    else: p =31416
+    else: p = 31416
 
     app.run(host='0.0.0.0', port=p)
