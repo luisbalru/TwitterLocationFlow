@@ -38,4 +38,4 @@ def Actualizar():
 def Iniciar():
      # Iniciamos el servicio web
     with shell_env(C_URL='wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443',C_USER=os.environ['CLIENT_USERNAME'], C_PASS = os.environ['CLIENT_PASSWD']):
-        run('cd TwitterLocationFlow && python src/genera_credenciales.py $C_URL $C_USER $C_PASS && sudo gunicorn app:app -b 0.0.0.0:80')
+        run('cd TwitterLocationFlow && python src/genera_credenciales.py $C_URL $C_USER $C_PASS && sudo gunicorn app:app -b 0.0.0.0:80 &')
