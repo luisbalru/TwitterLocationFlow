@@ -26,7 +26,7 @@ Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-t
 
 [Zeit site](https://twitterlocationflow-wodotzcwyc.now.sh  )
 
-Despligue final: twitterlocationflow.uksouth.cloudapp.azure.com
+Despliegue final: twitterlocationflow.uksouth.cloudapp.azure.com
 
 ### Tools
  - Python (Flask)
