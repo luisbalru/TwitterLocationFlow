@@ -8,7 +8,7 @@ from gremlin_python.driver import client, serializer
 from src.TwitterGraph import TwitterGraph
 
 try:
-	with open('src/data.txt') as json_file:
+	with open('data.txt') as json_file:
 		data = json.load(json_file)
 		url = data['C_URL']
 		user = data['C_USER']
