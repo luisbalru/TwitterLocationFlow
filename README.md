@@ -43,8 +43,8 @@ Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-t
 [Procfile Doc](doc/Procfile-doc.md)  
 [Automated build DockerHub](doc/ab-dockerhub.md)  
 [Zeit installation/deployment](doc/zeit-deploy.md)  
-[Heroku Deployment with Docker](doc/heroku-docker.md)
-[Creación y provisionamiento de máquinas](doc/provisionamiento.md)
+[Heroku Deployment with Docker](doc/heroku-docker.md)  
+[Creación y provisionamiento de máquinas](doc/provisionamiento.md)  
 [Despliegue de la aplicación](doc/despliegue.md)
 
 
