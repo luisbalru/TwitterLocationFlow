@@ -8,10 +8,14 @@ from gremlin_python.driver import client, serializer
 from src.TwitterGraph import TwitterGraph
 
 try:
-	print(os.environ['C_USER'])
-	self.cliente = client.Client('wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443','g',
-                                        username = os.environ['C_USER'],
-                                        password = os.environ['C_PASS'],
+	with open('src/data.txt') as json_file:
+		data = json.load(json_file)
+		url = data['C_URL']
+		user = data['C_USER']
+		passw = data['C_PASS']
+		self.cliente = client.Client(url,'g',
+                                        username = user,
+                                        password = passw,
                                         message_serializer = serializer.GraphSONSerializersV2d0())
 except Exception as e:
 	print('There was an exception: {0}'.format(e))
