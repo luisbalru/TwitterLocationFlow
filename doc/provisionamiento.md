@@ -12,8 +12,12 @@ La máquina virtual generada tiene las siguientes características:
 - Tamaño: Standard_F1
 - Localización: Sur de Reino Unido
 
+![creacion](images/up.png)
+
 ### Provisionamiento con Ansible
 
 Ansible es el software que he elegido para provisionar la máquina recién creada. La orden de provisionamiento se da también en el Vagrantfile, haciendo referencia al *playbook.yml* que se ha definido previamente. Paso a describir mi *playbook.yml*:  
 
 Con la idea de hacerlo más automatizable, genero un archivo *var.yml* donde especifico los paquetes que quiero que se instalen, de forma en que en el *playbook.yml* sólo tengo qu hacer referencia al anterior para que se instalen. Entre esos paquetes se encuentran build-essential, git, python3, python3-setuptools, python3-pip, libpq-dev. Además, instalo gunicorn.
+
+![provisionamiento](images/provision.png)

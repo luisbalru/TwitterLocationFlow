@@ -7,3 +7,8 @@ En el fabfile.py defino tres funciones:
 - Borrar: Elimina la carpeta del proyecto en la máquina remota
 - Actualizar: Borra el proyecto, hace un nuevo clon del mismo e instala sus dependencias (requirements.txt)
 - Iniciar: Pasa las variables de entorno necesarias para la app y la ejecuta.
+
+![actualizar](images/actualizando.png)
+
+
+![iniciando](images/iniciando.png)
