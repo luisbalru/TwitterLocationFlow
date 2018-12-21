@@ -31,10 +31,20 @@ Despligue final: twitterlocationflow.uksouth.cloudapp.azure.com
 ### Tools
  - Python (Flask)
  - Heroku (Paas). [Why Heroku?](doc/why-heroku.md)
- - Docker/DockerHub
- - Zeit
+ - Azure (IaaS)
 
 ### Installation
+
+In order to use my app, you will need to install in your local machine:
+
+  - Python (Python2 and 3)
+  - Azure Cli
+  - Vagrant
+  - Vagrant plugin for Azure
+  - Ansible
+  - Fabric
+
+Besides, all requirements specified are needed:
 
 `pip install -r requirements.txt`
 
