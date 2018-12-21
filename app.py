@@ -13,7 +13,7 @@ try:
 		url = data['C_URL']
 		user = data['C_USER']
 		passw = data['C_PASS']
-		self.cliente = client.Client(url,'g',
+		cliente = client.Client(url,'g',
                                         username = user,
                                         password = passw,
                                         message_serializer = serializer.GraphSONSerializersV2d0())
