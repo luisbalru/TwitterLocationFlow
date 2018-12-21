@@ -48,6 +48,10 @@ Besides, all requirements specified are needed:
 
 `pip install -r requirements.txt`
 
+### How to use it?
+
+Here you have a [user guide](doc/guide.md)
+
 ### Documentation
 
 [API Documentation](doc/API.md)  
