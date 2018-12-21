@@ -26,6 +26,8 @@ Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://iv1819-t
 
 [Zeit site](https://twitterlocationflow-wodotzcwyc.now.sh  )
 
+URL: twitterlocationflow.uksouth.cloudapp.azure.com
+
 ### Tools
  - Python (Flask)
  - Heroku (Paas). [Why Heroku?](doc/why-heroku.md)
