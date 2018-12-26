@@ -4,11 +4,38 @@ Para el despliegue utilizo la herramienta Fabric. [Aquí](http://docs.fabfile.or
 
 En el fabfile.py defino tres funciones:
 
-- Borrar: Elimina la carpeta del proyecto en la máquina remota
-- Actualizar: Borra el proyecto, hace un nuevo clon del mismo e instala sus dependencias (requirements.txt)
-- Iniciar: Pasa las variables de entorno necesarias para la app y la ejecuta.
+- InstalarApp: Hace un clon del proyecto de Github, instala sus dependencias y crea el directorio Errors (para las salidas de nohup)
+- ActualizarApp: En el directorio del proyecto hace un pull e instala las nuevas dependencias (si hubiere).
+- IniciarApp: ActualizaApp, genera variables de entorno, se las pasa a la máquina remota y genera credenciales allí y, por último, ejecuta la aplicación.
+- KillApp: Mata todos los procesos gunicorn de la máquina (sólo hay uno).
 
-![actualizar](images/actualizando.png)
+Estas funciones son llamadas a través de los scripts install.sh (crea la máquina, la provisiona e instala la app), run.sh y kill.sh, tomando el papel de botón para instalar, ejecutar y acabar la app.
 
+**Creando la máquina virtual y provisionando con Ansible**
 
-![iniciando](images/iniciando.png)
+![actualizar](images/instalando1.png)
+
+**Instalando App**
+
+![instalando2](images/instalando2.png)
+
+**Instalando dependecias**
+![instalando3](images/instalando3.png)
+
+**Creando Carpeta de errores**
+
+![instalando4](images/instalando4.png)
+
+**Ejecutando la App**
+
+![ejecutando1](images/ejecutando1.png)
+
+**Generando credenciales y lanzando app**
+![ejecutando2](images/ejecutando2.png)
+
+**Comprobando que hay un proceso en ejecución de gunicorn**
+![prueba-ejecución](images/ejecucion.png)
+
+**Prueba en el navegador**
+
+![funcionando](images/prueba.png)

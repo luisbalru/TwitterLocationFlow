@@ -7,14 +7,14 @@ from fabric.api import cd, run, sudo, shell_env
 def InstalarApp():
     run('git clone https://github.com/luisbalru/TwitterLocationFlow.git')
     with cd('TwitterLocationFlow'):
-        run('pip3 install --user -r TwitterLocationFlow/requirements.txt')
+        run('pip3 install --user -r requirements.txt')
         run('mkdir Errors')
 
 
 def ActualizarApp():
     with cd('TwitterLocationFlow'):
         run('git pull')
-        run('pip3 install --user -r TwitterLocationFlow/requirements.txt')
+        run('pip3 install --user -r requirements.txt')
 
 
 def IniciarApp():

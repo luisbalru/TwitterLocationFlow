@@ -17,9 +17,6 @@
       become: true
       command: apt update
 
-    - name: Upgrade sistema
-      become: true
-      command: apt upgrade
 
     - name: Update pip
       command: pip3 install --upgrade pip
