@@ -1,19 +1,32 @@
 - hosts: all
   remote_user: vagrant
-  vars_files:
-    - var.yml
-  gather_facts: no
-  become: yes
   tasks:
-    - name: Instalar paquetes base
-      apt: pkg={{ item }} update-cache=yes cache_valid_time=3600
-      with_items: "{{ system_packages }}"
+    - name: Instalar git
+      become: true
+      apt: name=git state=installed update_cache=true
+
+    - name: Instalar python3 y extras
+      become: true
+      apt: name={{ item }} state=installed update_cache=true
+      with_items:
+        - python3
+        - python3-setuptools
+        - python3-pip
 
     - name: Actualizar sistema
+      become: true
       command: apt update
+
+    - name: Upgrade sistema
+      become: true
+      command: apt upgrade
 
     - name: Update pip
       command: pip3 install --upgrade pip
 
     - name: Install gunicorn
       command: pip install git+https://github.com/benoitc/gunicorn.git
+
+    - name: Autoremove
+      become: true
+      command: apt autoremove
