@@ -24,8 +24,7 @@ Vagrant.configure('2') do |config|
   end
 
   # Provisionar con ansible
-  config.vm.provision "ansible" do |ansible|
-    ansible.become = true
+  config.vm.provision "ansible", run:"always" do |ansible|
     ansible.playbook = "./provision/playbook.yml"
 
   end
