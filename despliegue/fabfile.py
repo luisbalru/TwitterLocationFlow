@@ -16,27 +16,24 @@ along with this program. If not, see <http://www.gnu.org/licenses/>
 import os
 from fabric.api import cd, run, sudo, shell_env
 
-
-
-def Borrar():
-    # Borramos antiguo codigo
-    run('sudo rm -rf TwitterLocationFlow')
-
-
-def Actualizar():
-
-    # Borramos antiguo codigo
-    Borrar()
-
-    # Descargamos nuevo repositorio
+def InstalarApp():
     run('git clone https://github.com/luisbalru/TwitterLocationFlow.git')
+    with cd('TwitterLocationFlow'):
+        run('pip3 install --user -r TwitterLocationFlow/requirements.txt')
+        run('mkdir Errors')
 
-    # Instalamos requirements
-    run('pip3 install --user -r TwitterLocationFlow/requirements.txt')
+
+def ActualizarApp():
+    with cd('TwitterLocationFlow'):
+        run('git pull')
+        run('pip3 install --user -r TwitterLocationFlow/requirements.txt')
 
 
-def Iniciar():
+def IniciarApp():
      # Iniciamos el servicio web
     with shell_env(C_URL='wss://twitterlocationflow.gremlin.cosmosdb.azure.com:443',C_USER=os.environ['CLIENT_USERNAME'], C_PASS = os.environ['CLIENT_PASSWD']):
         run('cd TwitterLocationFlow && python src/genera_credenciales.py $C_URL $C_USER $C_PASS')
-        run('sudo gunicorn app:app -b 0.0.0.0:80 &')
+        sudo('nohup gunicorn app:app -b 0.0.0.0:80  > /Errors/nohup.out &')
+
+def KillApp():
+    sudo('pkill gunicorn')
