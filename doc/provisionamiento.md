@@ -18,6 +18,7 @@ La máquina virtual generada tiene las siguientes características:
 
 Ansible es el software que he elegido para provisionar la máquina recién creada. La orden de provisionamiento se da también en el Vagrantfile, haciendo referencia al *playbook.yml* que se ha definido previamente. Paso a describir mi *playbook.yml*:  
 
-Con la idea de hacerlo más automatizable, genero un archivo *var.yml* donde especifico los paquetes que quiero que se instalen, de forma en que en el *playbook.yml* sólo tengo qu hacer referencia al anterior para que se instalen. Entre esos paquetes se encuentran build-essential, git, python3, python3-setuptools, python3-pip, libpq-dev. Además, instalo gunicorn.
+Para el correcto funcionamiento de mi app, es necesario tener  git, python (Python3) y sus herramientas, y gunicorn. Por ello, utilizo un task con el módulo apt para instalar git, otro con un bucle para instalar todo lo concerniente a python (actualizando los repositorios previamente con *update_caché:yes*) y después tasks con comandos específicos para la actualizacion de pip y la instalación de gunicorn.  
+Como curiosidad, quiero comentar que en el Vagrantfile he añadido *run:always* para que cada vez que se ejecute, provisione la máquina.
 
 ![provisionamiento](images/provision.png)
