@@ -22,3 +22,9 @@ Para el correcto funcionamiento de mi app, es necesario tener  git, python (Pyth
 Como curiosidad, quiero comentar que en el Vagrantfile he añadido *run:always* para que cada vez que se ejecute, provisione la máquina.
 
 ![provisionamiento](images/provision.png)
+
+**REFERENCIAS**
+
+- [Ansible – 6. Redactando un playbook](https://www.youtube.com/watch?v=Wuv0ZPOMLf0&list=PLTd5ehIj0goP2RSCvTiz3-Cko8U6SQV1P&index=6)
+
+- [Iniciaciación a Ansible](https://www.youtube.com/watch?v=gFd9aj78_SM&t=1317s)

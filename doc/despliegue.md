@@ -39,3 +39,6 @@ Estas funciones son llamadas a través de los scripts install.sh (crea la máqui
 **Prueba en el navegador**
 
 ![funcionando](images/prueba.png)
+
+**REFERENCIAS**
+- [Fabricate your automated devops environment using python](https://www.youtube.com/watch?v=g4rCFMWAwgo)
