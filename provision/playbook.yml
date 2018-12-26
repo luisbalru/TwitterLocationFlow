@@ -7,14 +7,26 @@
 
     - name: Instalar python3 y extras
       become: true
-      apt: name=['python3','python3-setuptools','python3-pip'] state=installed update_cache=yes
-      
+      apt: name={{ item }} state=installed update_cache=true
+      with_items:
+        - python3
+        - python3-setuptools
+        - python3-pip
+
     - name: Actualizar sistema
       become: true
       command: apt update
+
+    - name: Upgrade sistema
+      become: true
+      command: apt upgrade
 
     - name: Update pip
       command: pip3 install --upgrade pip
 
     - name: Install gunicorn
       command: pip install git+https://github.com/benoitc/gunicorn.git
+
+    - name: Autoremove
+      become: true
+      command: apt autoremove
