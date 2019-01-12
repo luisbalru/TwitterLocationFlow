@@ -6,12 +6,6 @@ El primer cometido de un Vagrantfile es describir qué tipo de máquina requiere
 
 Para poder crear esta máquina, es necesario tener un Service Principal y un grupo de recursos.
 
-La máquina virtual generada tiene las siguientes características:
-
-- Sistema operativo: Ubuntu Server 16.04 LTS
-- Tamaño: Standard_F1
-- Localización: Sur de Reino Unido
-
 Veamos línea a línea el contenido del Vagrantfile:
 
 - Declaro una variable 'configuracion'. En ella, defino:
