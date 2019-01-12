@@ -3,7 +3,7 @@
 import unittest
 import os,sys, traceback
 from gremlin_python.driver import client, serializer
-from .TwitterGraph import TwitterGraph
+from TwitterGraph import TwitterGraph
 
 class TestTwitterGraph(unittest.TestCase):
     """ Clase creada para pasar tests a TwitterGraph """
