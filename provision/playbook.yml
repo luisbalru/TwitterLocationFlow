@@ -17,13 +17,6 @@
       become: true
       command: apt update
 
-
-    - name: Update pip
-      command: pip3 install --upgrade pip
-
-    - name: Install gunicorn
-      command: pip install git+https://github.com/benoitc/gunicorn.git
-
     - name: Autoremove
       become: true
       command: apt autoremove
