@@ -37,7 +37,7 @@ Despliegue final: twitterlocationflow.uksouth.cloudapp.azure.com
 
 In order to use my app, you will need to install in your local machine:
 
-  - Python (Python2 and 3)
+  - Python (Python3)
   - Azure Cli
   - Vagrant
   - Vagrant plugin for Azure
@@ -47,6 +47,8 @@ In order to use my app, you will need to install in your local machine:
 Besides, all requirements specified are needed:
 
 `pip install -r requirements.txt`
+
+Here you have the [installation guide](doc/ins_guide.md)
 
 ### How to use it?
 
