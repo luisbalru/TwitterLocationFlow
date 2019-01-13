@@ -20,9 +20,9 @@ After this, you need to create a service principal
 
 Credentials given after the Service Principal's creation must be written down in .bashrc file:
 
-export AZURE_TENANT_ID = <tenant>
-export AZURE_CLIENT_ID = <appId>
-export AZURE_SUBSCRIPTION_ID = <password>
+`export AZURE_TENANT_ID = tenant ` 
+`export AZURE_CLIENT_ID = appId`  
+`export AZURE_SUBSCRIPTION_ID = password`
 
 Finally, your account is ready to install the app.
 
