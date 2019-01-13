@@ -20,3 +20,6 @@
     - name: Autoremove
       become: true
       command: apt autoremove
+
+    - name: Update pip
+      command: pip3 install --upgrade pip
