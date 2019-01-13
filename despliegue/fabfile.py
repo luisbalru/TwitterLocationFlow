@@ -24,5 +24,5 @@ def IniciarApp():
         sudo('nohup gunicorn app:app -b 0.0.0.0:80 & echo $! > pid.txt')
 
 def KillApp():
-    with cd('TwitterLocationFlow')
+    with cd('TwitterLocationFlow'):
         sudo('var=`cat pid.txt` && kill -9 $var')
