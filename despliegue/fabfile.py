@@ -25,4 +25,4 @@ def IniciarApp():
 
 def KillApp():
     with cd('TwitterLocationFlow'):
-        sudo('var=`cat pid.txt` && kill -9 $var')
+        sudo('kill -9 `cat pid.txt`')
